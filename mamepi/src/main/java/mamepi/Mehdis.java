@@ -24,7 +24,7 @@ public class Mehdis extends Enemy {
 
 	@Override
 	public String getStringImagePath() {
-		return "/images/images.jpeg";
+		return "/images/images.png";
 	}
 
 	public MoveStrategy getNewMoveStrategy(GameCanvas canvas) {

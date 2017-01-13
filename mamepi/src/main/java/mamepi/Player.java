@@ -21,10 +21,10 @@ public class Player extends GameMovable implements Overlappable, GameEntity, Dra
 
     protected SpriteManagerDefaultImpl sprite;
     
-    final protected int WAZO_SIZE = 100;
+    final protected int WAZO_SIZE = 70;
 
     public Player(GameCanvas canvas, GameData data) {
-        this.sprite = new SpriteManagerDefaultImpl(new DrawableImage("/images/player.png", canvas), WAZO_SIZE, 3);
+        this.sprite = new SpriteManagerDefaultImpl(new DrawableImage("/images/player.png", canvas), WAZO_SIZE, 1);
         this.position = new Point(0, canvas.getHeight()-WAZO_SIZE);
         this.sprite.reset();
 
@@ -45,14 +45,14 @@ public class Player extends GameMovable implements Overlappable, GameEntity, Dra
 
     @Override
     public void oneStepMoveAddedBehavior() {
-        Point directionActual = this.moveDriver.getSpeedVector(this).getDirection();
-        if (directionActual.equals(new Point(1, 0))){
+        /*Point direction = this.moveDriver.getSpeedVector(this).getDirection();
+        if (direction.equals(new Point(1, 0))){
             this.sprite.setIncrement(2);
-        } else if (directionActual.equals(new Point(-1, 0))){
+        } else if (direction.equals(new Point(-1, 0))){
             this.sprite.setIncrement(0);
         } else {
         	this.sprite.setIncrement(1);
-        }
+        }*/
     }
     
 	public Rectangle getBoundingBox() {
