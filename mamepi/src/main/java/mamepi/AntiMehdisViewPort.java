@@ -15,6 +15,6 @@ public class AntiMehdisViewPort extends GameUniverseViewPortDefaultImpl {
 
 	@Override
 	protected URL backgroundImage(){
-		return backgroundImage("/images/worms.jpg");
+		return this.getClass().getResource("/images/worms.jpg");
 	}
 }

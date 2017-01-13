@@ -1,25 +1,40 @@
 package mamepi;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import gameframework.drawing.DrawableImage;
-import gameframework.drawing.GameCanvas;
-import gameframework.game.GameEntity;
+import java.awt.Point;
 
-public class Mehdis implements GameEntity {
+import gameframework.drawing.GameCanvas;
+import gameframework.game.GameData;
+import gameframework.motion.MoveStrategy;
+import gameframework.motion.MoveStrategyStraightLine;
+
+public class Mehdis extends Enemy {
 
 	GameCanvas canvas ;
 	
-	public Mehdis(GameCanvas canvas) {
+	public Mehdis(GameCanvas canvas, GameData data) {
 		this.canvas = canvas ;
-	}
-
-	public void draw(Graphics g) {
-		DrawableImage img = new DrawableImage("/images/images.jpeg", canvas) ;
-		img.draw(g);
+		this.init(canvas, data);
+		this.size = 50 ;
+		init(canvas, data);
 	}
 
 	public boolean isMovable() {
 		return true;
+	}
+
+	@Override
+	public String getStringImagePath() {
+		return "/images/images.jpeg";
+	}
+
+	public MoveStrategy getNewMoveStrategy(GameCanvas canvas) {
+		MoveStrategyStraightLine ms = new MoveStrategyStraightLine(new Point(0, 0), new Point(0, canvas.getHeight()));
+		ms.setSpeed(this.random(15, 5));
+		return ms;
+	}
+
+	@Override
+	public void oneStepMoveAddedBehavior() {
+		// TODO don't know don't care
 	}
 }

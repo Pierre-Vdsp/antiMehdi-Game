@@ -19,7 +19,7 @@ public class GameMenuBarAntiMehdis extends GameMenuBar {
 
 		antimehd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				/**/
+				/* will see */
 			}
 		});
 		
