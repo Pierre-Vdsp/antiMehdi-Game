@@ -19,7 +19,6 @@ public class Main {
 
 		window.createGUI();
 		game.start();
-
 	}
 
 }

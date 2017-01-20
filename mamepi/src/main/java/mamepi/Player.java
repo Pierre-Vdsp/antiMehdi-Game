@@ -42,18 +42,6 @@ public class Player extends GameMovable implements Overlappable, GameEntity, Dra
     public boolean isMovable() {
         return true;
     }
-
-    @Override
-    public void oneStepMoveAddedBehavior() {
-        /*Point direction = this.moveDriver.getSpeedVector(this).getDirection();
-        if (direction.equals(new Point(1, 0))){
-            this.sprite.setIncrement(2);
-        } else if (direction.equals(new Point(-1, 0))){
-            this.sprite.setIncrement(0);
-        } else {
-        	this.sprite.setIncrement(1);
-        }*/
-    }
     
 	public Rectangle getBoundingBox() {
 		Rectangle rectangle = new Rectangle(this.WAZO_SIZE, this.WAZO_SIZE);

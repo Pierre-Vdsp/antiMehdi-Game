@@ -22,6 +22,7 @@ public class LevelAntiMehdi extends GameLevelDefaultImpl {
 		Player p = new Player(data.getCanvas(),data);
 		data.getUniverse().addGameEntity(p);
 		data.getUniverse().addGameEntity(new Mehdis(data.getCanvas(), data));
+		data.getUniverse().addGameEntity(new Migale(data.getCanvas(), data));
 		
 		this.gameBoard = new AntiMehdisViewPort(this.data);
 
@@ -41,7 +42,7 @@ public class LevelAntiMehdi extends GameLevelDefaultImpl {
 			         return;
 			     }
 				data.getUniverse().addGameEntity(new Mehdis(data.getCanvas(), data));
-				data.getUniverse().addGameEntity(new Mehdis(data.getCanvas(), data));
+				data.getUniverse().addGameEntity(new Migale(data.getCanvas(), data));
 			}	
 		};
 	}

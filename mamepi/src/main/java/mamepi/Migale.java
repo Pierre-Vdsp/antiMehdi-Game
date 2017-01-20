@@ -7,11 +7,11 @@ import gameframework.game.GameData;
 import gameframework.motion.MoveStrategy;
 import gameframework.motion.MoveStrategyStraightLine;
 
-public class Mehdis extends Enemy {
+public class Migale extends Enemy {
 
 	GameCanvas canvas ;
 	
-	public Mehdis(GameCanvas canvas, GameData data) {
+	public Migale(GameCanvas canvas, GameData data) {
 		this.canvas = canvas ;
 		this.init(canvas, data);
 		this.size = 50 ;
@@ -24,7 +24,7 @@ public class Mehdis extends Enemy {
 
 	@Override
 	public String getStringImagePath() {
-		return "/images/images.png";
+		return "/images/migale.png";
 	}
 
 	public MoveStrategy getNewMoveStrategy(GameCanvas canvas) {
