@@ -20,12 +20,14 @@ import gameframework.motion.overlapping.Overlappable;
 public class Player extends GameMovable implements Overlappable, GameEntity, Drawable {
 
     protected SpriteManagerDefaultImpl sprite;
-    
-    final protected int WAZO_SIZE = 70;
-
+    protected DrawableImage imgsprite;
+    protected int WAZO_SIZE = 70;
+    protected Point initialPoint; 
     public Player(GameCanvas canvas, GameData data) {
-        this.sprite = new SpriteManagerDefaultImpl(new DrawableImage("/images/player.png", canvas), WAZO_SIZE, 1);
-        this.position = new Point(0, canvas.getHeight()-WAZO_SIZE);
+    	imgsprite = new DrawableImage("/images/player.png", canvas);
+        this.sprite = new SpriteManagerDefaultImpl(imgsprite, WAZO_SIZE, 1);
+        this.initialPoint =  new Point((canvas.getWidth()-WAZO_SIZE)/2, canvas.getHeight()-WAZO_SIZE);
+        this.position = new Point(this.initialPoint);
         this.sprite.reset();
 
         MoveStrategyKeyboard direction = new MoveStrategyKeyboard8Dir(false, new SpeedVector(new Point(0,0), 25));
@@ -50,6 +52,21 @@ public class Player extends GameMovable implements Overlappable, GameEntity, Dra
 	
 	public Point getPosition(){
 		return this.position;
+	}
+
+	@Override
+	public void oneStepMoveAddedBehavior() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void resetPosition(){
+        this.position = new Point(this.initialPoint);
+	}
+
+	public void increaseSize(int i) {
+		this.sprite = new SpriteManagerDefaultImpl(imgsprite, WAZO_SIZE+=i, 1);
+		
 	}
 		
 }

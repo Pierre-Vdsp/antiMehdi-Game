@@ -33,4 +33,13 @@ public class Mehdis extends Enemy {
 		return ms;
 	}
 
+	@Override
+	public void oneStepMoveAddedBehavior() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int getScore(){
+		return 1;
+	}
 }

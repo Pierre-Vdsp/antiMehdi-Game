@@ -17,7 +17,6 @@ import gameframework.motion.overlapping.Overlappable;
 public abstract class Enemy extends GameMovable implements Overlappable, GameEntity, Drawable{
 	protected SpriteManagerDefaultImpl sprite;
 	protected int size;
-	
 	public abstract String getStringImagePath();
 	public abstract MoveStrategy getNewMoveStrategy(GameCanvas canvas);
 	

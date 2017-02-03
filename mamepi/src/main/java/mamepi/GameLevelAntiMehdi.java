@@ -15,7 +15,7 @@ public class GameLevelAntiMehdi extends GameLevelDefaultImpl {
 	}
 	
 	protected void init() {
-		data.getUniverse().addGameEntity(new Mehdis(data.getCanvas()));
+		data.getUniverse().addGameEntity(new Mehdis(data.getCanvas(), data));
 		
 		this.gameBoard = new AntiMehdisViewPort(data);
 

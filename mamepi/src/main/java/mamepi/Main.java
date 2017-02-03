@@ -10,7 +10,7 @@ public class Main {
 		
 		GameConfiguration configuration = new GameConfiguration();
 		GameData data = new GameData(configuration);
-
+		//data.increaseLife(10);
 		data.addLevel(new LevelAntiMehdi(data));
 					
 		AntiMehdiGame game = new AntiMehdiGame(data);		
