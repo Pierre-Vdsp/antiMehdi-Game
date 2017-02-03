@@ -8,7 +8,7 @@ import gameframework.game.GameLevelDefaultImpl;
 
 public class LevelAntiMehdi extends GameLevelDefaultImpl {
 
-	protected static int nbEnemies = 30;
+	protected static int nbEnemies = 60;
 	public static int count = 0;
 	public static Timer timer = new Timer();
 	
@@ -22,7 +22,7 @@ public class LevelAntiMehdi extends GameLevelDefaultImpl {
 	
 	protected void init() {
 		TimerTask task = this.getTimerTask();
-		timer.scheduleAtFixedRate(task, 0, 4000);
+		timer.scheduleAtFixedRate(task, 0, 2000);
 		Player p = new Player(data.getCanvas(),data);
 		//this.initBorders();
 		data.getUniverse().addGameEntity(p);

@@ -38,8 +38,4 @@ public class MehdisVie extends Enemy {
 		// TODO Auto-generated method stub
 		
 	}
-
-	public int getScore(){
-		return 100;
-	}
 }
