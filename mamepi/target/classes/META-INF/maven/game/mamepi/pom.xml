@@ -3,4 +3,19 @@
   <groupId>game</groupId>
   <artifactId>mamepi</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>fr.univlille1.fil.coo</groupId>
+  		<artifactId>gameframework</artifactId>
+  	</dependency>
+  </dependencies>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>fr.univlille1.fil.coo</groupId>
+  			<artifactId>gameframework</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
