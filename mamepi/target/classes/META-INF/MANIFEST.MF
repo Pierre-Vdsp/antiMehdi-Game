@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Built-By: vandesompele
 Build-Jdk: 1.8.0_91
+Main-Class: mamepi.Main
 Created-By: Maven Integration for Eclipse
 
