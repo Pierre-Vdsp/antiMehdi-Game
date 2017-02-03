@@ -39,9 +39,5 @@ public class BorderLimit implements MoveBlocker, GameEntity,Drawable {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	
-	
-	
 	
 }
